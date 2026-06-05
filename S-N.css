@@ -13,6 +13,10 @@ body{
   min-height: 100vh;
   background-image: radial-gradient(ellipse at bottom right,var(--dark-1) 0%, transparent 60%);
 }
+img{
+    height: auto;
+    width: 70px;
+}
 .navbar{
   background-color: var(--preto) !important;
   padding: 12px 48px;

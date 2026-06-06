@@ -1,0 +1,442 @@
+:root {
+  --preto: #17181e;
+  --preto-profundo: #050608;
+  --grafite: #26272f;
+  --linha: rgba(255, 255, 255, 0.08);
+  --texto: #ffffff;
+  --texto-suave: rgba(255, 255, 255, 0.72);
+  --ciano: #67e5e7;
+  --amarelo: #fff9b2;
+  --vermelho: #ff3626;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 84% 84%, rgba(103, 229, 231, 0.08) 0%, transparent 20%),
+    radial-gradient(circle at 18% 36%, rgba(103, 229, 231, 0.05) 0%, transparent 18%),
+    var(--preto);
+  color: var(--texto);
+  font-family: "Arimo", sans-serif;
+}
+
+.invest-navbar {
+  background: var(--preto-profundo);
+  padding: 16px 48px;
+}
+
+.invest-navbar .container-fluid {
+  padding: 0;
+}
+
+.orbit-logo {
+  width: 70px;
+  height: auto;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 4px 0 !important;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.is-active {
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.invest-page {
+  padding: 48px clamp(24px, 7vw, 104px) 72px;
+}
+
+.invest-hero-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 46px;
+}
+
+.invest-title {
+  margin: 0;
+  font-size: clamp(52px, 6vw, 86px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  color: #fff;
+}
+
+.invest-updated {
+  margin: 0 0 10px;
+  font-size: clamp(18px, 1.6vw, 24px);
+  color: rgba(255, 255, 255, 0.82);
+  white-space: nowrap;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.featured-card {
+  position: relative;
+  min-height: 340px;
+  padding: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(103, 229, 231, 0.12) 0%, transparent 26%),
+    radial-gradient(circle at 90% 90%, rgba(103, 229, 231, 0.08) 0%, transparent 28%),
+    linear-gradient(180deg, #252730 0%, #1d1f27 100%);
+  box-shadow: 0 26px 64px rgba(0, 0, 0, 0.28);
+}
+
+.featured-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 18px 18px auto;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(103, 229, 231, 0.98);
+  box-shadow: 0 10px 24px rgba(103, 229, 231, 0.24);
+}
+
+.featured-card::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.featured-brand {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 34px;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.98) 0%, rgba(242, 244, 248, 0.96) 38%, rgba(230, 233, 239, 0.95) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 16px 34px rgba(0, 0, 0, 0.16);
+}
+
+.featured-logo {
+  width: 100%;
+  max-width: 320px;
+  max-height: 210px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.12));
+}
+
+.featured-logo-amazon {
+  max-width: 360px;
+}
+
+.featured-logo-tiktok {
+  max-width: 280px;
+}
+
+.featured-logo-tesla {
+  max-width: 220px;
+}
+
+.featured-score {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2;
+  width: 126px;
+  height: 126px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ciano);
+  border: 6px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(18, 114, 121, 0.24);
+}
+
+.featured-score strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+.featured-score span {
+  display: block;
+  margin-top: -8px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.invest-list {
+  margin-top: 56px;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 32px;
+}
+
+.company-row {
+  min-height: 118px;
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr) 126px;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.015) 100%),
+    #21232b;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.company-row:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 52px rgba(0, 0, 0, 0.18);
+}
+
+.company-logo-slot,
+.company-name,
+.company-score {
+  display: flex;
+  align-items: center;
+}
+
+.company-logo-slot {
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.98) 0%, rgba(245, 246, 248, 0.96) 48%, rgba(232, 235, 240, 0.96) 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 10px;
+}
+
+.company-name {
+  padding: 0 30px;
+  font-size: clamp(24px, 1.6vw, 34px);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #f6f7f9;
+}
+
+.company-score {
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 18px;
+  text-align: center;
+  color: #101114;
+}
+
+.score-cyan {
+  background: linear-gradient(180deg, #88e7ef 0%, #69d1da 100%);
+}
+
+.score-yellow {
+  background: linear-gradient(180deg, #fff6b6 0%, #f6eb8e 100%);
+}
+
+.score-red {
+  background: linear-gradient(180deg, #ff5a46 0%, #f33c2a 100%);
+}
+
+.company-logo {
+  width: 100%;
+  max-width: 64px;
+  max-height: 52px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
+}
+
+.company-logo-amazon {
+  max-width: 72px;
+}
+
+.company-logo-google,
+.company-logo-openai {
+  max-width: 68px;
+}
+
+.company-logo-meta {
+  max-width: 74px;
+}
+
+.company-logo-microsoft,
+.company-logo-netflix {
+  max-width: 58px;
+}
+
+.company-logo-nike {
+  max-width: 62px;
+}
+
+.company-logo-tesla,
+.company-logo-tiktok {
+  max-width: 52px;
+}
+
+.company-score-value {
+  display: block;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.company-score-label {
+  display: block;
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 1199.98px) {
+  .featured-grid,
+  .company-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .invest-navbar {
+    padding: 16px 20px;
+  }
+
+  .navbar-collapse {
+    margin-top: 16px;
+    padding: 16px 0 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .navbar-nav {
+    align-items: flex-start;
+    gap: 12px !important;
+  }
+
+  .invest-page {
+    padding: 36px 20px 60px;
+  }
+
+  .invest-hero-head {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  .invest-updated {
+    margin-bottom: 0;
+    white-space: normal;
+  }
+
+  .featured-grid,
+  .company-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .featured-card {
+    min-height: 280px;
+    padding: 18px;
+  }
+
+  .featured-card::after {
+    width: 96px;
+    height: 96px;
+  }
+
+  .featured-score {
+    width: 104px;
+    height: 104px;
+  }
+
+  .featured-score strong {
+    font-size: 46px;
+  }
+
+  .featured-score span {
+    font-size: 18px;
+  }
+
+  .brand-tiktok {
+    flex-direction: column;
+  }
+
+  .company-row {
+    grid-template-columns: 82px minmax(0, 1fr) 112px;
+    min-height: 96px;
+  }
+
+  .company-logo-slot {
+    font-size: 18px;
+  }
+
+  .company-name {
+    padding: 0 18px;
+    font-size: 18px;
+  }
+
+  .company-score {
+    padding: 0 10px;
+  }
+
+  .company-score-value {
+    font-size: 34px;
+  }
+
+  .company-score-label {
+    font-size: 13px;
+  }
+}
